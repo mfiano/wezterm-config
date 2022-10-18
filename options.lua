@@ -1,3 +1,5 @@
+local loc = require("local")
+
 local black = "#1f1f1f"
 local red = "#e06c75"
 local green = "#98c379"
@@ -51,28 +53,6 @@ return {
   titlebar_font = "Iosevka Term",
   titlebar_font_size = 12.5,
   titlebar_font_weight = "Bold",
-  remote_muxers = {
-    { name = "gateway", remote_address = "gateway" },
-    { name = "laptop2", remote_address = "laptop2" },
-    { name = "vps", remote_address = "vps" }
-  },
-  workspaces = {
-    shell = {
-      { layout = "vertical" },
-      { layout = "vertical" },
-      { layout = "quad" },
-      { layout = "quad" }
-    },
-    dev = {
-      { layout = "vertical", commands = { "nvim", "nvim" } },
-      { layout = "vertical", commands = { "nvim", "nvim" } },
-      { layout = "vertical" }
-    },
-    monitor = {
-      { commands = { "htop" } }
-    },
-    chat = {
-      { commands = { "toxic" } }
-    }
-  }
+  remote_muxers = loc.remote_muxers,
+  workspaces = loc.workspaces
 }
