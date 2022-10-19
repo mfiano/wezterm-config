@@ -30,6 +30,9 @@ local keys = {
   util.map_key({ "SHIFT", "Insert" }, act.PasteFrom("PrimarySelection")),
   util.map_key({ "CTRL", "SHIFT", "Insert" }, act.PasteFrom("Clipboard")),
   util.map_key({ "CTRL", "c" }, wez.action_callback(util.maybe_copy)),
+  -- Workspaces
+  util.map_key({ "LEADER", "LeftBracket" }, act.SwitchWorkspaceRelative(-1)),
+  util.map_key({ "LEADER", "RightBracket" }, act.SwitchWorkspaceRelative(1)),
   -- Tabs
   util.map_key({ "LEADER", "CTRL", "LeftArrow" }, act.ActivateTabRelativeNoWrap(-1)),
   util.map_key({ "LEADER", "CTRL", "RightArrow" }, act.ActivateTabRelativeNoWrap(1)),
