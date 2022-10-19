@@ -32,6 +32,10 @@ wez.on("update-status", function(window, pane)
   window:set_left_status(text)
 end)
 
+wez.on("bell", function(window, pane)
+  window:toast_notification("wezterm", "notify on pane: " .. pane.title, pane)
+end)
+
 wez.on("mux-startup", function()
   win.make_workspaces(opt.workspaces)
 end)
