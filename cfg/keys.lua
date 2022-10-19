@@ -8,7 +8,14 @@ local M = {}
 
 local keys = {
   -- Mode switching
-  util.map_key({ "LEADER", "Space" }, util.activate_mode("dispatch", true, 3000)),
+  util.map_key({ "LEADER", "F1" }, act.ShowDebugOverlay),
+  util.map_key({ "LEADER", "c" }, act.ActivateCopyMode),
+  util.map_key({ "LEADER", "f" }, util.activate_mode("font")),
+  util.map_key({ "LEADER", "p" }, util.activate_mode("pane")),
+  util.map_key({ "LEADER", "q" }, act.QuickSelect),
+  util.map_key({ "LEADER", "t" }, util.activate_mode("tab")),
+  util.map_key({ "LEADER", "w" }, act.ShowLauncherArgs { flags = "FUZZY|WORKSPACES" }),
+
   -- Buffer
   util.map_key({ "SHIFT", "PageUp" }, act.ScrollByPage(-1)),
   util.map_key({ "SHIFT", "PageDown" }, act.ScrollByPage(1)),

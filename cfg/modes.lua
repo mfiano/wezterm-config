@@ -2,15 +2,6 @@ local act = require("wezterm").action
 local util = require("lib/util")
 
 return {
-  dispatch = {
-    util.map_key("F1", act.ShowDebugOverlay),
-    util.map_key("c", act.ActivateCopyMode),
-    util.map_key("f", util.activate_mode("font")),
-    util.map_key("p", util.activate_mode("pane")),
-    util.map_key("q", act.QuickSelect),
-    util.map_key("t", util.activate_mode("tab")),
-    util.map_key("w", act.ShowLauncherArgs { flags = "FUZZY|WORKSPACES" })
-  },
   font = {
     util.map_key("=", act.ResetFontSize),
     util.map_key({ "SHIFT", "+" }, act.IncreaseFontSize),
