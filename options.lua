@@ -15,6 +15,7 @@ local grey3 = "#5c6379"
 
 return {
   animation_fps = 30,
+  auto_reload = true,
   colors = {
     ansi = { black, red, green, yellow, blue, magenta, cyan, white2 },
     background = grey1,

@@ -91,8 +91,8 @@ function M.map_leader(keys, timeout)
   return { mods = mods, key = key, timeout = timeout }
 end
 
-function M.notify(window, title, text, timeout)
-  window:toast_notification(title, text, nil, timeout)
+function M.notify(window, text, timeout)
+  window:toast_notification("wezterm", text, nil, timeout)
 end
 
 function M.split_cmds(cmds, count)

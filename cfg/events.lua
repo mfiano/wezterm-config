@@ -12,8 +12,8 @@ wez.on("config-reloaded", function(window, pane)
 end)
 
 wez.on("window-config-reloaded", function(window)
-  if wez.GLOBAL.reload_notify then
-    util.notify(window, "wezterm", "reloaded", 2000)
+  if opt.auto_reload or wez.GLOBAL.reload_notify then
+    util.notify(window, "reloaded", 1500)
     wez.GLOBAL.reload_notify = false
   end
 end)
@@ -33,7 +33,8 @@ wez.on("update-status", function(window, pane)
 end)
 
 wez.on("bell", function(window, pane)
-  window:toast_notification("wezterm", "notify on pane: " .. pane.title, pane)
+  local text = "notify on pane: " .. pane.get_title()
+  util.notify(window, text)
 end)
 
 wez.on("mux-startup", function()

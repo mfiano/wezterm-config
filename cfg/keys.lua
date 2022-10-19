@@ -49,6 +49,7 @@ local keys = {
   util.map_key({ "LEADER", "z" }, act.TogglePaneZoomState),
   -- Misc
   util.map_key({ "LEADER", "\\" }, act.QuitApplication),
+  util.map_key({ "LEADER", "SHIFT", "R" }, act.EmitEvent("config-reloaded")),
 }
 
 M.config = {

@@ -30,7 +30,8 @@ M.config = {
         bg_color = color.tab_inactive_bg,
         fg_color = color.tab_inactive_fg
       }
-    }
+    },
+    visual_bell = color.red
   },
   cursor_thickness = opt.cursor_height,
   custom_block_glyphs = true,
@@ -53,11 +54,11 @@ M.config = {
   tab_max_width = opt.tab_width,
   use_cap_height_to_scale_fallback_fonts = true,
   use_fancy_tab_bar = true,
-  use_resize_increments = true,
+  use_resize_increments = false,
   visual_bell = {
-    fade_in_duration_ms = 150,
+    fade_in_duration_ms = 500,
     fade_in_function = "EaseIn",
-    fade_out_duration_ms = 150,
+    fade_out_duration_ms = 500,
     fade_out_function = "EaseOut",
     target = "CursorColor",
   },
