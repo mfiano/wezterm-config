@@ -1,6 +1,5 @@
 local wez = require("wezterm")
 local opt = require("options")
-local util = require("lib/util")
 
 local M = {}
 

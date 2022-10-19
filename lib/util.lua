@@ -1,6 +1,5 @@
 local wez = require("wezterm")
 local act = wez.action
-local opt = require("options")
 
 local M = {}
 

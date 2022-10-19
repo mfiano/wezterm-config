@@ -23,13 +23,13 @@ wez.on("format-tab-title", function(tab)
 end)
 
 wez.on("update-right-status", function(window)
-  local mode_text = txt.mode_text(window)
-  window:set_right_status(mode_text)
+  local text = txt.mode_text(window)
+  window:set_right_status(text)
 end)
 
-wez.on("update-status", function(window)
-  local workspace_text = txt.workspace_text(window)
-  window:set_left_status(workspace_text)
+wez.on("update-status", function(window, pane)
+  local text = txt.domain_workspace_text(window, pane)
+  window:set_left_status(text)
 end)
 
 wez.on("mux-startup", function()
